@@ -10,7 +10,7 @@ services:
       - ./workspace:/workspace
     ports:
       - "${VUE_UI_PORT:-8000}:${VUE_UI_PORT:-8000}"
-      - "${APP_PORT_RANGE:-8080-8089:8080-8089}"
+      - "${APP_PORT_RANGE:-9080-9089:8080-8089}"
     environment:
       - "TZ=${TZ:-UTC}"
     command: "vue ui --host=0.0.0.0 --port=${VUE_UI_PORT:-8000}"
